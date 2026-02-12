@@ -166,7 +166,31 @@ nav a:hover {
 }
 
 .dom {
-    display: none;
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-width: 250px;
+}
+
+.key-panel-header {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.key-panel-content {
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    font-family: Arial, sans-serif;
 }
 
 /* Apply Form Styles */

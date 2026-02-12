@@ -1,3 +1,28 @@
+// Keyboard tracking panel
+document.addEventListener("keydown", function(event) {
+    const keyDisplay = document.querySelector("#keyDisplay");
+    const key = event.key === " " ? "[SPACE]" : event.key;
+    const timestamp = new Date().toLocaleTimeString();
+    
+    // Create new entry
+    const entry = document.createElement("div");
+    entry.textContent = `[${timestamp}] ${key}`;
+    
+    // Add to top of display
+    keyDisplay.insertBefore(entry, keyDisplay.firstChild);
+    
+    // Keep only last 10 keys
+    const entries = keyDisplay.children;
+    while (entries.length > 10) {
+        keyDisplay.removeChild(entries[entries.length - 1]);
+    }
+});
+
+// Clear all events button
+document.querySelector("#clearBtn").addEventListener("click", function() {
+    document.querySelector(".cards").innerHTML = "";
+});
+
 const form = document.querySelector("#form")
 form.addEventListener("submit", function(event){
     event.preventDefault();
