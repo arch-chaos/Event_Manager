@@ -22,6 +22,3 @@ form.addEventListener("submit", function(event){
         card.remove();
     });
 })
-
-
-g
