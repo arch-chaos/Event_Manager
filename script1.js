@@ -1,15 +1,3 @@
-// Simple Randomization Helper Functions
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function randomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-}
-
-function randomBoolean() {
-    return Math.random() < 0.5;
-}
 
 // Keyboard tracking panel
 document.addEventListener("keydown", function(event) {
@@ -68,8 +56,8 @@ function createRandomCard() {
         <p><strong>Date:</strong> ${dateString}</p>
         <p><strong>Category:</strong> ${randomCategory}</p>
         <p><strong>Description:</strong> ${randomDescription}</p>
-    `;
-    document.querySelector(".cards").appendChild(card);
+        `;
+        document.querySelector(".cards").appendChild(card);
     
     card.querySelector(".deleteCard").addEventListener("click", function() {
         card.remove();
@@ -87,7 +75,7 @@ form.addEventListener("submit", function(event){
     console.log(eventDate.value);
     console.log(category.value);
     console.log(description.value);
-
+    
 
     const card = document.createElement("div");
     card.classList.add("card");
@@ -104,3 +92,16 @@ form.addEventListener("submit", function(event){
         card.remove();
     });
 })
+
+// Simple Randomization Helper Functions
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+function randomBoolean() {
+    return Math.random() < 0.5;
+}
